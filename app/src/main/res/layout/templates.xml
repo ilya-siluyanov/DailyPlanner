@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--планы на сегодня!-->
+    <!--<TextView-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/dayPlans"-->
+    <!--android:textSize="20sp"/>-->
+    <!--<Toolbar-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="10dp"-->
+    <!--android:background="#ffffff">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="#ffffff"-->
+    <!--android:text="@string/toolBar"-->
+    <!--android:textAlignment="center"-->
+    <!--android:textColor="#000000"-->
+    <!--android:textSize="25sp"-->
+    <!--android:visibility="visible" />-->
+    <!--</Toolbar>-->
+
+
+
+
+    <!--&lt;!&ndash;планы на неделю!&ndash;&gt;-->
+
+
+    <!--<TextView-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/weekPlans"-->
+    <!--android:textSize="20sp"/>-->
+
+    <!--<ListView android:id="@+id/weekPlansContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+
+
+    <!--&lt;!&ndash;планы на месяц!&ndash;&gt;-->
+
+
+    <!--<TextView-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/monthPlans"-->
+    <!--android:textSize="20sp"/>-->
+    <!--<ListView android:id="@+id/monthPlansContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+    <!--</ListView>-->
+
+    <!--&lt;!&ndash;бессрочные планы!&ndash;&gt;-->
+
+    <!--<TextView-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:text="@string/notDatePlans"-->
+    <!--android:textSize="20sp"/>-->
+    <!--<ListView android:id="@+id/notDatePlansContainer"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content">-->
+
+</android.support.constraint.ConstraintLayout>

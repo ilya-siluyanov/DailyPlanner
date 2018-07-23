@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar"/>
+
+    <EditText android:id="@+id/newTitle"
+        android:hint="@string/titleHint"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"
+        android:padding="16dp"
+        android:singleLine="false"
+        android:inputType="text" />
+
+    <EditText android:id="@+id/newDesc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/descHint"
+        android:textAlignment="center"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:lines="5" />
+
+    <Button
+        android:id="@+id/confirmNewPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center|bottom"
+        android:text="@string/confirm"
+        android:background="@color/colorWhite"/>
+
+</LinearLayout>

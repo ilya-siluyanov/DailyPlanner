@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">DailyPlanner</string>
+    <string name="toolBar">Daily planner</string>
+    <string name="todayPlans">Планы на сегодня:</string>
+    <string name="weekPlans">Планы на неделю</string>
+    <string name="monthPlans">Планы на месяц</string>
+    <string name="notDatePlans">Бессрочные планы</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="templatePlan">Здесь должно быть краткое описание вашего плана</string>
+    <string name="addNewPlan">Добавить новый пункт</string>
+    <string name="titleHint">Введите заголовок</string>
+    <string name="descHint">Опишите всю суть действия,\n которое нужно выполнить</string>
+    <string name="enterData">Введите заголовок и описание действия</string>
+    <string name="info_about_plan">Информация о плане</string>
+    <string name="title">Заголовок</string>
+    <string name="description">Подробности</string>
+    <string name="confirm">Подтвердить</string>
+</resources>
