@@ -38,6 +38,7 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_main);
        setActionBar(findViewById(R.id.toolbar));
+       if (getActionBar()!=null)
        getActionBar().setDisplayShowTitleEnabled(false);
         MAIN_ACTIVITY = this;
         fillData();
@@ -131,14 +132,12 @@ public class MainActivity extends FragmentActivity {
             addData(data);
             refresh();
         }else if ((requestCode == Constant.REQUEST_CODE_SHOW_NEW_PLAN) && (resultCode == RESULT_OK)){
-            if (data.getBundleExtra(Constant.ARGUMENTS)!=null){
-                String newTitle = data.getStringExtra(Constant.TITLE);
+            String newTitle = data.getStringExtra(Constant.TITLE);
                 String newDesc = data.getStringExtra(Constant.DESCRIPTION);
                 int position = data.getIntExtra(Constant.POSITION_ARG,0);
                 if (!MainActivity.data.get(position).getTitle().equals(newTitle)||!MainActivity.data.get(position).getDescription().equals(newDesc)){
                     MainActivity.data.get(position).setTitle(newTitle);
                     MainActivity.data.get(position).setDescription(newDesc);
-                }
             }
         }
     }

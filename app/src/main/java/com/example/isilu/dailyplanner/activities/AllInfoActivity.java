@@ -53,11 +53,11 @@ public class AllInfoActivity extends Activity {
      * @param desc - подробности плана
      */
     private void finishActivity(String title,String desc){
-        Bundle args = new Bundle();
-        args.putString(Constant.TITLE,title);
-        args.putString(Constant.DESCRIPTION,desc);
-        args.putInt(Constant.POSITION_ARG,getIntent().getIntExtra(Constant.POSITION_ARG,0));
-        setResult(RESULT_OK,new Intent().putExtra(Constant.ARGUMENTS,args));
+        Intent args = new Intent();
+        args.putExtra(Constant.TITLE,title);
+        args.putExtra(Constant.DESCRIPTION,desc);
+        args.putExtra(Constant.POSITION_ARG,getIntent().getIntExtra(Constant.POSITION_ARG,0));
+        setResult(RESULT_OK,args);
         finish();
     }
 

@@ -7,6 +7,6 @@ public final class Constant {
     public static final String POSITION_ARG = "position";
 
     public static final int REQUEST_CODE_ADD_NEW_PLAN =200;
-    public static final int REQUEST_CODE_SHOW_NEW_PLAN =200;
+    public static final int REQUEST_CODE_SHOW_NEW_PLAN =400;
     public static final int REQUEST_CODE_REMOVE_NEW_PLAN =200;
 }
