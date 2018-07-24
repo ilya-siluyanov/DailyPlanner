@@ -7,7 +7,6 @@ import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toolbar;
 
 import com.example.isilu.dailyplanner.R;
 import com.example.isilu.dailyplanner.fragments.PlanElement;
@@ -114,7 +113,7 @@ public class MainActivity extends FragmentActivity {
 
             Log.v(this.getClass().getSimpleName(),"starting NewPlanActivity");
 
-            startActivityForResult(intent,Constant.REQUEST_CODE);
+            startActivityForResult(intent,Constant.REQUEST_CODE_ADD_NEW_PLAN);
         }
         return super.onMenuItemSelected(featureId, item);
     }
@@ -127,10 +126,20 @@ public class MainActivity extends FragmentActivity {
      */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        if ((requestCode == Constant.REQUEST_CODE) && (resultCode == RESULT_OK)){
+        if ((requestCode == Constant.REQUEST_CODE_ADD_NEW_PLAN) && (resultCode == RESULT_OK)){
             Log.v(this.getClass().getSimpleName(),"NewPlanActivity executed successfully");
             addData(data);
             refresh();
+        }else if ((requestCode == Constant.REQUEST_CODE_SHOW_NEW_PLAN) && (resultCode == RESULT_OK)){
+            if (data.getBundleExtra(Constant.ARGUMENTS)!=null){
+                String newTitle = data.getStringExtra(Constant.TITLE);
+                String newDesc = data.getStringExtra(Constant.DESCRIPTION);
+                int position = data.getIntExtra(Constant.POSITION_ARG,0);
+                if (!MainActivity.data.get(position).getTitle().equals(newTitle)||!MainActivity.data.get(position).getDescription().equals(newDesc)){
+                    MainActivity.data.get(position).setTitle(newTitle);
+                    MainActivity.data.get(position).setDescription(newDesc);
+                }
+            }
         }
     }
 
@@ -142,6 +151,11 @@ public class MainActivity extends FragmentActivity {
         PlanElement element = getElement(data);
         MainActivity.data.add(element);
         Log.v(this.getClass().getSimpleName(),"new plan was added successfully:"+MainActivity.data.get(MainActivity.data.size()-1));
+    }
+
+
+    public void showAllData(Intent data){
+        startActivityForResult(data,Constant.REQUEST_CODE_SHOW_NEW_PLAN);
     }
 
     /**

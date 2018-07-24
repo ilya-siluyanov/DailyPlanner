@@ -19,6 +19,10 @@
         <activity android:name=".activities.NewPlanActivity"
             android:theme="@style/AppTheme">
         </activity>
+
+        <activity android:name=".activities.AllInfoActivity"
+            android:theme="@style/AppTheme">
+        </activity>
     </application>
 
 </manifest>
