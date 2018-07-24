@@ -36,7 +36,8 @@ public class PlanAdapter extends ArrayAdapter<PlanElement> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater)context.getSystemService (Context.LAYOUT_INFLATER_SERVICE);
         View rowView = inflater.inflate(R.layout.fragment_plan_element, parent,false);
-        rowView.setOnClickListener(i->{
+        TextView title = rowView.findViewById(R.id.textTitle);
+        title.setOnClickListener(i->{
             Intent intent = new Intent();
             intent.setClass(getContext(), AllInfoActivity.class);
             intent.putExtra(Constant.TITLE,MainActivity.data.get(position).getTitle());
@@ -44,7 +45,6 @@ public class PlanAdapter extends ArrayAdapter<PlanElement> {
             intent.putExtra(Constant.POSITION_ARG,position);
             MainActivity.MAIN_ACTIVITY.showAllData(intent);
         });
-        TextView title = rowView.findViewById(R.id.textTitle);
 
         title.setText(MainActivity.data.get(position).getTitle());
         ImageButton button = rowView.findViewById(R.id.deletePlanButton);

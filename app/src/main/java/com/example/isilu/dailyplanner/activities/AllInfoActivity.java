@@ -12,6 +12,8 @@ import android.widget.Toast;
 import com.example.isilu.dailyplanner.R;
 import com.example.isilu.dailyplanner.staticData.Constant;
 
+import java.util.Objects;
+
 public class AllInfoActivity extends Activity {
     EditText title;
     EditText desc;
@@ -21,7 +23,10 @@ public class AllInfoActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.plan_all_info);
         setActionBar(findViewById(R.id.toolbar));
-        getActionBar().setDisplayShowTitleEnabled(false);
+        if (getActionBar()!=null){
+            getActionBar().setDisplayShowTitleEnabled(false);
+        }
+
 
         initializeFields();
 
@@ -36,7 +41,9 @@ public class AllInfoActivity extends Activity {
      */
     private void initializeFields(){
         title= findViewById(R.id.plan_title);
+        title.setText(getIntent().getStringExtra(Constant.TITLE));
         desc= findViewById(R.id.plan_desc);
+        desc.setText(getIntent().getStringExtra(Constant.DESCRIPTION));
         confirm = findViewById(R.id.confirmButton);
     }
 
@@ -49,6 +56,7 @@ public class AllInfoActivity extends Activity {
         Bundle args = new Bundle();
         args.putString(Constant.TITLE,title);
         args.putString(Constant.DESCRIPTION,desc);
+        args.putInt(Constant.POSITION_ARG,getIntent().getIntExtra(Constant.POSITION_ARG,0));
         setResult(RESULT_OK,new Intent().putExtra(Constant.ARGUMENTS,args));
         finish();
     }
