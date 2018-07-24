@@ -15,18 +15,18 @@
         android:minHeight="32dp"
         android:minWidth="300dp"
         android:text="@string/templatePlan"
-        android:textAlignment="textStart"
+        android:layout_gravity="center"
         android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large" />
 
     <ImageButton
         android:id="@+id/deletePlanButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="32dp"
         android:minWidth="32dp"
         android:src="@drawable/icon_delete_plan"
         android:background="@color/colorWhite"
-        android:layout_gravity="center|end"
+        android:layout_gravity="top|end"
         android:focusable="false"
         tools:ignore="ContentDescription" />
 </LinearLayout>
